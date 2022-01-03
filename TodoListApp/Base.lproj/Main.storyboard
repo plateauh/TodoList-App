@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Single Item View Controller-->
+        <!--Add new item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SingleItemViewController" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hT7-qo-WyU" secondAttribute="trailing" constant="10" id="kbu-Eh-fxg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5DQ-bK-Fy8"/>
+                    <navigationItem key="navigationItem" title="Add new item" id="5DQ-bK-Fy8"/>
                     <connections>
                         <outlet property="itemDateDP" destination="bLB-aC-5et" id="khY-cY-IMh"/>
                         <outlet property="itemDetailsTV" destination="WPX-7o-43S" id="dhX-cN-9xC"/>
@@ -92,34 +92,38 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmN-5T-R70">
-                                            <rect key="frame" x="20" y="6" width="71" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmN-5T-R70">
+                                            <rect key="frame" x="20" y="6" width="280" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="280" id="I2v-p2-0K1"/>
+                                                <constraint firstAttribute="height" constant="20" id="qkj-nf-ekK"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-77-nX7">
-                                            <rect key="frame" x="20" y="45.5" width="386" height="20.5"/>
+                                            <rect key="frame" x="20" y="44.5" width="386" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DZ-lP-T8m">
-                                            <rect key="frame" x="320" y="6" width="74" height="21"/>
+                                            <rect key="frame" x="320" y="6" width="74" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="1DZ-lP-T8m" secondAttribute="trailing" constant="20" symbolic="YES" id="7fS-GZ-ZIO"/>
-                                        <constraint firstItem="FOI-77-nX7" firstAttribute="leading" secondItem="BiN-hn-hNy" secondAttribute="leading" constant="20" symbolic="YES" id="Cmm-YQ-Y2Q"/>
-                                        <constraint firstItem="FOI-77-nX7" firstAttribute="top" secondItem="tmN-5T-R70" secondAttribute="bottom" constant="18.5" id="Iva-fC-QCj"/>
-                                        <constraint firstItem="1DZ-lP-T8m" firstAttribute="top" secondItem="BiN-hn-hNy" secondAttribute="top" constant="6" id="M7T-DU-it7"/>
-                                        <constraint firstItem="tmN-5T-R70" firstAttribute="leading" secondItem="BiN-hn-hNy" secondAttribute="leading" constant="20" symbolic="YES" id="Okn-Ze-cZ7"/>
-                                        <constraint firstItem="tmN-5T-R70" firstAttribute="top" secondItem="BiN-hn-hNy" secondAttribute="top" constant="6" id="Vgp-Mj-9TK"/>
-                                        <constraint firstAttribute="trailing" secondItem="FOI-77-nX7" secondAttribute="trailing" constant="8" id="lUl-hy-I2e"/>
-                                        <constraint firstAttribute="bottom" secondItem="FOI-77-nX7" secondAttribute="bottom" constant="6" id="yRO-zX-tSn"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FOI-77-nX7" secondAttribute="bottom" constant="-5" id="8Mm-8G-4HT"/>
+                                        <constraint firstItem="FOI-77-nX7" firstAttribute="leading" secondItem="BiN-hn-hNy" secondAttribute="leadingMargin" id="DkY-bw-uFn"/>
+                                        <constraint firstItem="1DZ-lP-T8m" firstAttribute="firstBaseline" secondItem="tmN-5T-R70" secondAttribute="firstBaseline" id="ELV-SM-lUf"/>
+                                        <constraint firstItem="FOI-77-nX7" firstAttribute="leading" secondItem="tmN-5T-R70" secondAttribute="leading" id="GQe-io-Oho"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FOI-77-nX7" secondAttribute="trailing" constant="-12" id="Ign-fE-gXT"/>
+                                        <constraint firstItem="1DZ-lP-T8m" firstAttribute="top" secondItem="BiN-hn-hNy" secondAttribute="topMargin" constant="-5" id="S11-Gf-Zv4"/>
+                                        <constraint firstItem="1DZ-lP-T8m" firstAttribute="trailing" secondItem="BiN-hn-hNy" secondAttribute="trailingMargin" id="YGJ-VB-sXA"/>
+                                        <constraint firstItem="FOI-77-nX7" firstAttribute="top" secondItem="tmN-5T-R70" secondAttribute="bottom" constant="18.5" id="wEq-Bj-CF4"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
