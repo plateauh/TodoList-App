@@ -17,11 +17,15 @@ class SingleItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func addItemButtonPressed(_ sender: UIButton) {
-        delegate?.addItem(title: itemTitleTF.text!, detials: itemDetailsTV.text, date: "\(itemDateDP.date)", isDone: false)
+        // src: https://medium.com/geekculture/new-date-formatter-api-f2e6da01d407
+        let dateFormatted = itemDateDP.date.formatted(.dateTime
+                                                        .month(.twoDigits)
+                                                        .day(.twoDigits)
+                                                        .year())
+        delegate?.addItem(title: itemTitleTF.text!, detials: itemDetailsTV.text, date: dateFormatted, isDone: false)
     }
     
 }
